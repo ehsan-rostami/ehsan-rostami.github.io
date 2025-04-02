@@ -6,6 +6,59 @@
     <title>Publications - Ehsan Rostami</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Additional styles for journal covers */
+        .publication-item {
+            display: flex;
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 2rem;
+        }
+        
+        .publication-year {
+            min-width: 60px;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+        
+        .publication-journal-cover {
+            width: 100px;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .publication-journal-cover img {
+            width: 100%;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .publication-journal-cover img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .publication-content {
+            flex: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .publication-item {
+                flex-direction: column;
+            }
+            
+            .publication-journal-cover {
+                width: 80px;
+                margin-bottom: 1rem;
+                align-self: center;
+            }
+            
+            .publication-year {
+                margin-bottom: 0.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -36,6 +89,9 @@
                 <div class="publications-list">
                     <div class="publication-item journal">
                         <div class="publication-year">2025</div>
+                        <div class="publication-journal-cover">
+                            <img src="images/sustainable-cities-cover.jpg" alt="Sustainable Cities and Society Journal Cover">
+                        </div>
                         <div class="publication-content">
                             <h3>The impact of urban morphology on sunlight availability at urban and neighborhood scales: A systematic review</h3>
                             <p class="publication-authors">Rostami, E., & Nasrollahi, N.</p>
@@ -56,6 +112,9 @@
                     
                     <div class="publication-item journal">
                         <div class="publication-year">2024</div>
+                        <div class="publication-journal-cover">
+                            <img src="images/energy-buildings-cover.jpg" alt="Energy and Buildings Journal Cover">
+                        </div>
                         <div class="publication-content">
                             <h3>A comprehensive study of how urban morphological parameters impact the solar potential, energy consumption and daylight autonomy in canyons and buildings</h3>
                             <p class="publication-authors">Rostami, E., Nasrollahi, N., & Khodakarami, J.</p>
@@ -76,6 +135,9 @@
                     
                     <div class="publication-item journal">
                         <div class="publication-year">2023</div>
+                        <div class="publication-journal-cover">
+                            <img src="images/solar-energy-cover.jpg" alt="Solar Energy Journal Cover">
+                        </div>
                         <div class="publication-content">
                             <h3>The impacts of urban canyons morphology on daylight availability and energy consumption of buildings in a hot-summer Mediterranean climate</h3>
                             <p class="publication-authors">Nasrollahi, N., & Rostami, E.</p>
@@ -88,12 +150,12 @@
                             <div class="publication-abstract">
                                 <button class="abstract-toggle">Abstract <i class="fas fa-chevron-down"></i></button>
                                 <div class="abstract-content">
-                                    <p>Proper sunlight access has a positive impact on the physical and mental health of citizens, as well as on reducing energy consumption. This capacity may be limited by inappropriate urban morphology, and urban canyons and buildings are deprived of proper daylight. The purpose of this research is to study the current solar potential on the surface of the canyons and buildings and the effect of urban morphology parameters on the amount of each of the main variables of the research in Ilam, Iran. First, solar radiation, daylight illuminance, and air temperature were measured at different points of the studied canyons for three days. After that, the studied area was modeled with Rhino-Grasshopper software, and simulation was done using Ladybug Tools and UMI plugin. The results showed that the amount of daylight available in most canyons is low. Less than 30 % of the canyon’s surfaces benefited from 6 h of direct sunlight during the measurement. The simulation results for the 62 studied buildings showed that the highest amount of daylight is related to buildings with a height of more than 10 m. 56 % of the buildings had an annual solar radiation of less than 500 mw/m2. The roofs of the buildings received the most radiation, accounting for 72 % of the total radiation. By examining the parameters of urban morphology, it was found that the most influential parameter on the amount of solar radiation was the floor area, and the height of the buildings had the most influence on energy consumption.</p>
+                                    <p>Assessing sunlight conditions in urban environments is crucial, as high-quality natural light is essential for human health and well-being while supporting the production of clean and affordable energy. This systematic review examines the current state of research on solar access in urban and neighborhood contexts, identifying key variables and the impact of urban morphology on indoor natural light levels and outdoor solar energy potential. Using the PRISMA protocol, 202 articles were selected, categorized based on thematic and spatial classifications, and their validation methods critically assessed. Key findings from the reviewed articles regarding the impact of urban morphology on solar access are presented and categorized by theme. Finally, the dependent and independent variables in the studies and the validation results were analyzed. The findings indicate that most studies at the urban scale have focused more on outdoor solar energy potential, with fewer studies examining indoor natural light conditions. Building density emerged as the most frequently investigated morphological parameter. Additionally, the review highlights the scarcity of studies that simultaneously consider indoor and outdoor spaces and jointly assess indoor-outdoor solar performance. Although approximately 25% of the studies included validation procedures, direct comparisons were challenging due to the need for standardized validation protocols.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                 
+                    
                 </div>
             </section>
         </div>

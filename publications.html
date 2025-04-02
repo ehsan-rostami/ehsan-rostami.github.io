@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - Ehsan Rostami</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Ehsan Rostami</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="publications.html" class="active">Publications</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="certificates.html">Certificates</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="publications-section">
+                <h2>Publications</h2>
+                
+                <div class="publication-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="journal">Journal Articles</button>
+                    <button class="filter-btn" data-filter="review">Peer Reviews</button>
+                </div>
+                
+                <div class="publications-list">
+                    <div class="publication-item journal">
+                        <div class="publication-year">2025</div>
+                        <div class="publication-content">
+                            <h3>The impact of urban morphology on sunlight availability at urban and neighborhood scales: A systematic review</h3>
+                            <p class="publication-authors">Rostami, E., & Nasrollahi, N.</p>
+                            <p class="publication-journal">Sustainable Cities and Society, 121, 106194</p>
+                            <div class="publication-links">
+                                <a href="https://doi.org/10.1016/j.scs.2025.106194" target="_blank" class="publication-link">
+                                    <i class="fas fa-external-link-alt"></i> DOI
+                                </a>
+                            </div>
+                            <div class="publication-abstract">
+                                <button class="abstract-toggle">Abstract <i class="fas fa-chevron-down"></i></button>
+                                <div class="abstract-content">
+                                    <p>This systematic review examines the relationship between urban morphology and sunlight availability across urban and neighborhood scales. The paper synthesizes findings from numerous studies to identify key morphological parameters that influence solar access and highlights methodological approaches for evaluating sunlight availability in complex urban environments.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item journal">
+                        <div class="publication-year">2024</div>
+                        <div class="publication-content">
+                            <h3>A comprehensive study of how urban morphological parameters impact the solar potential, energy consumption and daylight autonomy in canyons and buildings</h3>
+                            <p class="publication-authors">Rostami, E., Nasrollahi, N., & Khodakarami, J.</p>
+                            <p class="publication-journal">Energy and Buildings, 305, 113904</p>
+                            <div class="publication-links">
+                                <a href="https://doi.org/10.1016/j.enbuild.2024.113904" target="_blank" class="publication-link">
+                                    <i class="fas fa-external-link-alt"></i> DOI
+                                </a>
+                            </div>
+                            <div class="publication-abstract">
+                                <button class="abstract-toggle">Abstract <i class="fas fa-chevron-down"></i></button>
+                                <div class="abstract-content">
+                                    <p>This study investigates the complex relationships between urban morphological parameters and their impact on solar potential, energy consumption, and daylight autonomy in urban canyons and buildings. The research provides insights into optimizing urban design for energy efficiency and daylight availability.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item journal">
+                        <div class="publication-year">2023</div>
+                        <div class="publication-content">
+                            <h3>The impacts of urban canyons morphology on daylight availability and energy consumption of buildings in a hot-summer Mediterranean climate</h3>
+                            <p class="publication-authors">Nasrollahi, N., & Rostami, E.</p>
+                            <p class="publication-journal">Solar Energy, 266, 112181</p>
+                            <div class="publication-links">
+                                <a href="https://doi.org/10.1016/j.solener.2023.112181" target="_blank" class="publication-link">
+                                    <i class="fas fa-external-link-alt"></i> DOI
+                                </a>
+                            </div>
+                            <div class="publication-abstract">
+                                <button class="abstract-toggle">Abstract <i class="fas fa-chevron-down"></i></button>
+                                <div class="abstract-content">
+                                    <p>This paper examines how the morphology of urban canyons affects daylight availability and energy consumption in buildings located in hot-summer Mediterranean climates. The study provides valuable insights for urban planners and architects working in similar climate zones.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="publication-item review">
+                        <div class="publication-year">2022-2024</div>
+                        <div class="publication-content">
+                            <h3>Peer Review Activities</h3>
+                            <p>Served as a reviewer for 7 manuscripts across 3 journals:</p>
+                            <ul>
+                                <li>Building and Environment (1 review)</li>
+                                <li>Energy and Buildings (5 reviews)</li>
+                                <li>Frontiers of Architectural Research (1 review)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ehsan Rostami. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for abstract toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const abstractToggles = document.querySelectorAll('.abstract-toggle');
+            
+            abstractToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    content.classList.toggle('show');
+                    const icon = this.querySelector('i');
+                    icon.classList.toggle('fa-chevron-down');
+                    icon.classList.toggle('fa-chevron-up');
+                });
+            });
+            
+            // Filter functionality
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const publicationItems = document.querySelectorAll('.publication-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter publications
+                    publicationItems.forEach(item => {
+                        if (filter === 'all' || item.classList.contains(filter)) {
+                            item.style.display = 'flex';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

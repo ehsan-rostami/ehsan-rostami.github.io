@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal website of Ehsan Rostami, researcher in Architecture and Energy focusing on sustainable urban design and energy efficiency.">
     <title>CV - Ehsan Rostami</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -25,9 +30,40 @@
 
     <main>
         <div class="container">
+            <div class="content-wrapper">
+                <!-- Left sidebar - Profile section -->
+                <aside class="profile-sidebar">
+                    <div class="profile-image">
+                        <img src="images/profile.jpg" alt="Ehsan Rostami, Architecture and Energy researcher">
+                    </div>
+                    <div class="profile-info">
+                        <h2>Ehsan Rostami</h2>
+                        <p class="subtitle">He/Him/His</p>
+                        <p class="subtitle">MSc in Architecture and Energy</p>
+                        <p class="subtitle">Prospective PhD Student 2026</p>
+                        <div class="contact-details">
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:ehsan.rostami@outlook.com">ehsan.rostami@outlook.com</a></p>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/ehsan-rostami-353387139" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.researchgate.net/profile/Ehsan_Rostami3" target="_blank"><i class="fab fa-researchgate"></i></a>
+                            <a href="https://orcid.org/0009-0009-4513-5260" target="_blank"><i class="fab fa-orcid"></i></a>
+                            <a href="https://scholar.google.com/citations?user=A6zpEdQAAAAJ&hl=en" target="_blank"><i class="fa-brands fa-google"></i></a>
+                        </div>
+                    </div>
+                </aside>
+    
+                <!-- Main content section -->
+                <div class="main-content">        
             <section class="cv-section">
                 <h2>Curriculum Vitae</h2>
                 
+                <div class="cv-download">
+                    <a href="images/Ehsan Rostami CV - Prospective PhD Student.pdf" download class="cv-download-btn">
+                        <i class="fas fa-file-download"></i>
+                        <span>Download CV</span>
+                    </a>
+                </div>                
                 <div class="cv-content">
                     <div class="cv-block">
                         <h3><i class="fas fa-graduation-cap"></i> Education</h3>
@@ -81,11 +117,11 @@
                             <div class="cv-item-header">
                                 <h4>Peer Review</h4>
                             </div>
-                            <p>7 reviews for 3 publications:</p>
+                            <p>8 reviews for 3 publications:</p>
                             <ul>
                                 <li>Building and Environment (1)</li>
                                 <li>Energy and Buildings (5)</li>
-                                <li>Frontiers of Architectural Research (1)</li>
+                                <li>Frontiers of Architectural Research (2)</li>
                             </ul>
                         </div>
                     </div>
@@ -146,5 +182,10 @@
             <p>&copy; 2025 Ehsan Rostami. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+    </script>
 </body>
 </html>

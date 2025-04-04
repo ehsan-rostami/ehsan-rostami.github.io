@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ehsan Rostami - Personal Website</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Personal website of Ehsan Rostami, researcher in Architecture and Energy focusing on sustainable urban design and energy efficiency.">
+        <title>Ehsan Rostami - Personal Website</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
         <div class="container">
             <h1>Ehsan Rostami</h1>
             <nav>
@@ -29,7 +37,7 @@
                 <!-- Left sidebar - Profile section -->
                 <aside class="profile-sidebar">
                     <div class="profile-image">
-                        <img src="images/profile.jpg" alt="Ehsan Rostami">
+                        <img src="images/profile.jpg" alt="Ehsan Rostami, Architecture and Energy researcher">
                     </div>
                     <div class="profile-info">
                         <h2>Ehsan Rostami</h2>
@@ -37,14 +45,13 @@
                         <p class="subtitle">MSc in Architecture and Energy</p>
                         <p class="subtitle">Prospective PhD Student 2026</p>
                         <div class="contact-details">
-                            <p><i class="fas fa-envelope"></i> ehsan.rostami@outlook.com</p>
-                            <p><i class="fas fa-map-marker-alt"></i> Ilam, Iran</p>
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:ehsan.rostami@outlook.com">ehsan.rostami@outlook.com</a></p>
+                         
                         </div>
                         <div class="social-links">
                             <a href="https://www.linkedin.com/in/ehsan-rostami-353387139" target="_blank"><i class="fab fa-linkedin"></i></a>
                             <a href="https://www.researchgate.net/profile/Ehsan_Rostami3" target="_blank"><i class="fab fa-researchgate"></i></a>
                             <a href="https://orcid.org/0009-0009-4513-5260" target="_blank"><i class="fab fa-orcid"></i></a>
-                            <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                             <a href="https://scholar.google.com/citations?user=A6zpEdQAAAAJ&hl=en" target="_blank"><i class="fa-brands fa-google"></i></a>
                         </div>
                     </div>
@@ -54,6 +61,9 @@
                 <div class="main-content">
                     <section class="home-content">
                         <h2>About Me</h2>
+                        <p class="intro-paragraph">
+                            I'm a passionate researcher at the intersection of architecture, energy, and urban design. My work explores how the built environment shapes our experience of spaces while optimizing for sustainability and energy efficiency. Through computational analysis and innovative methodologies, I seek to create architectural solutions that respond to both human needs and environmental challenges.
+                        </p>
                         <div class="journey">
                             <h3>My Academic Journey</h3>
                             <p>I am a graduate of Architecture and Energy with a focus on sustainable urban design and energy efficiency. My research examines how urban morphology impacts daylight availability, energy consumption, and solar potential in buildings and urban canyons.</p>
@@ -84,5 +94,10 @@
             <p>&copy; 2025 Ehsan Rostami. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+    </script>
 </body>
 </html>

@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal website of Ehsan Rostami, researcher in Architecture and Energy focusing on sustainable urban design and energy efficiency.">
-    <title>Publications - Ehsan Rostami</title>
+    <meta name="description" content="Projects by Ehsan Rostami, researcher in Architecture and Energy focusing on sustainable urban design and energy efficiency.">
+    <title>Projects - Ehsan Rostami</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projects-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,8 +23,8 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="publications.html" class="active">Publications</a></li>
-                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
                     <li><a href="cv.html">CV</a></li>
                     <li><a href="certificates.html">Certificates</a></li>
                 </ul>
@@ -55,86 +56,63 @@
                         </div>
                     </div>
                 </aside>
-            <section class="publications-section">
-                <h2>Publications</h2>
-                
-                <div class="publication-filters">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="journal">Journal Articles</button>
+
+                <!-- Main content section -->
+                <div class="main-content">
+                    <section class="projects-section">
+                        <h2>Research Projects</h2>
+                         <div class="projects-grid">
+                            <!-- Project 1 -->
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="images/projects/project01.jpg" alt="Mobile Measurement">
+                                </div>
+                                <div class="project-overlay">
+                                    <div class="project-description">
+                                        Advancing urban microclimate research through efficient mobile data collection methods
+                                    </div>
+                                </div>
+                                <div class="project-info">
+                                    <h3 class="project-title"><a href="projects/project01.html">Mobile Measurement: Beyond Static Data</a></h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Project 2 -->
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="images/projects/project02.jpg" alt="3D Urban Modeling without GIS">
+                                </div>
+                                <div class="project-overlay">
+                                    <div class="project-description">
+                                        Overcoming data gaps: a large-scale 3D urban model created using resourceful methods where GIS data is limited, enabling robust solar potential & energy consumption simulations.
+                                    </div>
+                                </div>
+                                <div class="project-info">
+                                    <h3 class="project-title"><a href="projects/project02.html">3D Urban Modeling without GIS</a></h3>
+                                </div>
+                            </div>
+                            
+                            <!-- Project 3 -->
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="images/projects/project03.jpg" alt="Urban Morphology Toolkit">
+                                </div>
+                                <div class="project-overlay">
+                                    <div class="project-description">
+                                        Automated parameter extraction for urban analysis
+                                    </div>
+                                </div>
+                                <div class="project-info">
+                                    <h3 class="project-title"><a href="projects/project03.html">Urban Morphology Toolkit</a></h3>
+                                </div>
+                            </div>
+                            
+
+                            </div>
+                        </div>
+                    </section>
                 </div>
-                
-                <div class="publications-list">
-                    <div class="publication-item journal">
-                        <div class="publication-year">2025</div>
-                        <div class="publication-journal-cover">
-                            <img src="images/sustainable-cities-cover.jpg" alt="Sustainable Cities and Society Journal Cover">
-                        </div>
-                        <div class="publication-content">
-                            <h3>The impact of urban morphology on sunlight availability at urban and neighborhood scales: A systematic review</h3>
-                            <p class="publication-authors">Rostami, E., & Nasrollahi, N.</p>
-                            <p class="publication-journal">Sustainable Cities and Society, 121, 106194</p>
-                            <div class="publication-links">
-                                <a href="https://doi.org/10.1016/j.scs.2025.106194" target="_blank" class="publication-link">
-                                    <i class="fas fa-external-link-alt"></i> DOI
-                                </a>
-                            </div>
-                            <div class="publication-abstract">
-                                <button class="abstract-toggle">Abstract <i class="fas fa-chevron-down"></i></button>
-                                <div class="abstract-content">
-                                    <p>Assessing sunlight conditions in urban environments is crucial, as high-quality natural light is essential for human health and well-being while supporting the production of clean and affordable energy. This systematic review examines the current state of research on solar access in urban and neighborhood contexts, identifying key variables and the impact of urban morphology on indoor natural light levels and outdoor solar energy potential. Using the PRISMA protocol, 202 articles were selected, categorized based on thematic and spatial classifications, and their validation methods critically assessed. Key findings from the reviewed articles regarding the impact of urban morphology on solar access are presented and categorized by theme. Finally, the dependent and independent variables in the studies and the validation results were analyzed. The findings indicate that most studies at the urban scale have focused more on outdoor solar energy potential, with fewer studies examining indoor natural light conditions. Building density emerged as the most frequently investigated morphological parameter. Additionally, the review highlights the scarcity of studies that simultaneously consider indoor and outdoor spaces and jointly assess indoor-outdoor solar performance. Although approximately 25% of the studies included validation procedures, direct comparisons were challenging due to the need for standardized validation protocols.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="publication-item journal">
-                        <div class="publication-year">2024</div>
-                        <div class="publication-journal-cover">
-                            <img src="images/energy-buildings-cover.jpg" alt="Energy and Buildings Journal Cover">
-                        </div>
-                        <div class="publication-content">
-                            <h3>A comprehensive study of how urban morphological parameters impact the solar potential, energy consumption and daylight autonomy in canyons and buildings</h3>
-                            <p class="publication-authors">Rostami, E., Nasrollahi, N., & Khodakarami, J.</p>
-                            <p class="publication-journal">Energy and Buildings, 305, 113904</p>
-                            <div class="publication-links">
-                                <a href="https://doi.org/10.1016/j.enbuild.2024.113904" target="_blank" class="publication-link">
-                                    <i class="fas fa-external-link-alt"></i> DOI
-                                </a>
-                            </div>
-                            <div class="publication-abstract">
-                                <button class="abstract-toggle">Abstract <i class="fas fa-chevron-down"></i></button>
-                                <div class="abstract-content">
-                                    <p>Over the past two decades, global greenhouse gas emissions have surged, leading to rising sea levels and climate change. Solar energy has emerged as an excellent solution to this problem. This study aims to assess daylight availability and energy consumption in urban canyons and blocks in a semi-arid climate while exploring the correlation between the heterogeneity of urban morphological parameters and key research variables. The study employed field measurements and simulations using Ladybug Tools and UMI. Data were collected from urban canyons and blocks in three areas, amounting to 1,366,982 m2. The findings indicate that areas with abundant greenery and H/W ratios exceeding 1.8 experience the most significant shading effects in urban canyons. Selecting suitable trees and placing them in strategic locations can enhance energy efficiency. Furthermore, broad urban canyons (H/W < 0.5) receive four times more solar radiation than narrow urban canyons (H/W > 1.8) with high tree density, peaking at 240 kWh/m2 during summer. In urban blocks, rooftops have the highest solar potential, with imbalances between building heights and interbuilding shading as factors that reduce solar capabilities. Tree coverage significantly affects the solar potential of facades, with some urban blocks receiving less than 5,000 kWh/m2 of solar radiation on the southern facades each month. Finally, this study examined the impact of heterogeneity within urban morphological parameters on the principal research variables. The results indicate that the heterogeneity observed in urban morphological parameters affects daylight availability and energy consumption within urban blocks.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="publication-item journal">
-                        <div class="publication-year">2023</div>
-                        <div class="publication-journal-cover">
-                            <img src="images/solar-energy-cover.jpg" alt="Solar Energy Journal Cover">
-                        </div>
-                        <div class="publication-content">
-                            <h3>The impacts of urban canyons morphology on daylight availability and energy consumption of buildings in a hot-summer Mediterranean climate</h3>
-                            <p class="publication-authors">Nasrollahi, N., & Rostami, E.</p>
-                            <p class="publication-journal">Solar Energy, 266, 112181</p>
-                            <div class="publication-links">
-                                <a href="https://doi.org/10.1016/j.solener.2023.112181" target="_blank" class="publication-link">
-                                    <i class="fas fa-external-link-alt"></i> DOI
-                                </a>
-                            </div>
-                            <div class="publication-abstract">
-                                <button class="abstract-toggle">Abstract <i class="fas fa-chevron-down"></i></button>
-                                <div class="abstract-content">
-                                    <p>Assessing sunlight conditions in urban environments is crucial, as high-quality natural light is essential for human health and well-being while supporting the production of clean and affordable energy. This systematic review examines the current state of research on solar access in urban and neighborhood contexts, identifying key variables and the impact of urban morphology on indoor natural light levels and outdoor solar energy potential. Using the PRISMA protocol, 202 articles were selected, categorized based on thematic and spatial classifications, and their validation methods critically assessed. Key findings from the reviewed articles regarding the impact of urban morphology on solar access are presented and categorized by theme. Finally, the dependent and independent variables in the studies and the validation results were analyzed. The findings indicate that most studies at the urban scale have focused more on outdoor solar energy potential, with fewer studies examining indoor natural light conditions. Building density emerged as the most frequently investigated morphological parameter. Additionally, the review highlights the scarcity of studies that simultaneously consider indoor and outdoor spaces and jointly assess indoor-outdoor solar performance. Although approximately 25% of the studies included validation procedures, direct comparisons were challenging due to the need for standardized validation protocols.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </section>
+            </div>
         </div>
     </main>
 
@@ -143,47 +121,9 @@
             <p>&copy; 2025 Ehsan Rostami. All rights reserved.</p>
         </div>
     </footer>
-
     <script>
-            document.querySelector('.menu-toggle').addEventListener('click', function() {
-        document.querySelector('nav ul').classList.toggle('show');
-    });
-        // JavaScript for abstract toggle functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const abstractToggles = document.querySelectorAll('.abstract-toggle');
-            
-            abstractToggles.forEach(toggle => {
-                toggle.addEventListener('click', function() {
-                    const content = this.nextElementSibling;
-                    content.classList.toggle('show');
-                    const icon = this.querySelector('i');
-                    icon.classList.toggle('fa-chevron-down');
-                    icon.classList.toggle('fa-chevron-up');
-                });
-            });
-            
-            // Filter functionality
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const publicationItems = document.querySelectorAll('.publication-item');
-            
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const filter = this.getAttribute('data-filter');
-                    
-                    // Update active button
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    // Filter publications
-                    publicationItems.forEach(item => {
-                        if (filter === 'all' || item.classList.contains(filter)) {
-                            item.style.display = 'flex';
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    });
-                });
-            });
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
         });
     </script>
 </body>

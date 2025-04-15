@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Urban Modeling without GIS - Ehsan Rostami</title>
+    <meta name="description" content="Project page detailing the innovative 3D urban modeling approach used to simulate Ilam city without reliance on GIS data.">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../projects-style.css">
+    <link rel="stylesheet" href="project01-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="container">
+            <h1>Ehsan Rostami</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../publications.html">Publications</a></li>
+                    <li><a href="../projects.html" class="active">Projects</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                    <li><a href="../certificates.html">Certificates</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Left sidebar - Profile section -->
+                <aside class="profile-sidebar">
+                    <div class="profile-image">
+                        <img src="../images/profile.jpg" alt="Ehsan Rostami, Architecture and Energy researcher">
+                    </div>
+                    <div class="profile-info">
+                        <h2>Ehsan Rostami</h2>
+                        <p class="subtitle">He/Him/His</p>
+                        <p class="subtitle">MSc in Architecture and Energy</p>
+                        <p class="subtitle">Prospective PhD Student 2026</p>
+                        <div class="contact-details">
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:ehsan.rostami@outlook.com">ehsan.rostami@outlook.com</a></p>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/ehsan-rostami-353387139" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.researchgate.net/profile/Ehsan_Rostami3" target="_blank"><i class="fab fa-researchgate"></i></a>
+                            <a href="https://orcid.org/0009-0009-4513-5260" target="_blank"><i class="fab fa-orcid"></i></a>
+                            <a href="https://scholar.google.com/citations?user=A6zpEdQAAAAJ&hl=en" target="_blank"><i class="fa-brands fa-google"></i></a>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Main content section -->
+                <div class="main-content">
+                    <section class="project-details">
+                        <h2>3D Urban Modeling without GIS</h2>
+                        <p class="project-intro">
+                            This project details the methodology for creating a detailed 3D urban model of central Ilam city for microclimate simulation, achieved without relying on GIS data.
+                        </p>
+
+                        <div class="project-overview">
+                            <h3><i class="fas fa-info-circle"></i> Project Overview</h3>
+                            <p>Accurate urban models are essential for understanding and simulating microclimate conditions, especially in relation to solar potential and energy consumption. This project addresses the challenge of creating such models in areas lacking readily available GIS data.</p>
+                            <div class="image-gallery">
+                                <img src="../images/projects/project02_1.jpg" alt="3D Urban Model Screenshot" onclick="openFullscreen(this)">
+                                <img src="../images/projects/project02_2.jpg" alt="Data Collection Process" onclick="openFullscreen(this)">
+                            </div>
+                        </div>
+
+                        <div class="methodology">
+                            <h3><i class="fas fa-tools"></i> Methodology</h3>
+                            <ul>
+                                <li><b>Data Acquisition:</b> Collection of detailed architectural plans from municipalities, high-resolution aerial photographs, and on-site photography. In some cases, information was acquired through residents and inhabitants.
+                                </li>
+                                <li><b>3D Modeling:</b> Labor-intensive creation of approximately 2,500 building models within the urban core of Ilam city, taking approximately 8 months.</li>
+                                <li><b>Irregular Texture Simulation:</b> Accurate representation of the natural irregularity in urban fabric, capturing detailed building shapes and adjacencies without assuming a simplified, regularized urban texture.</li>
+                            </ul>
+                        </div>
+
+                        <div class="innovation">
+                            <h3><i class="fas fa-lightbulb"></i> Key Innovation</h3>
+                            <p>The creation of a large-scale (approximately 2,500 buildings) and high-fidelity 3D urban model without utilizing GIS data represents an achievement in our field.</p>
+                            <p>This methodology demonstrates a viable approach for solar potential and energy consumption research in underdeveloped regions lacking robust GIS resources, which is a common limitation, particularly in many Iranian cities, allowing detailed building information to be accurately modeled.</p>
+                        </div>
+
+                        <div class="results">
+                            <h3><i class="fas fa-chart-bar"></i> Key Findings</h3>
+                            <p>The completed 3D model enabled detailed simulation of solar potential and energy consumption, revealing how the natural irregularity of urban texture significantly influences energy performance. These findings provide crucial insights for sustainable urban planning, especially in contexts with similar data limitations.</p>
+                        </div>
+
+                        <div class="publications">
+                            <h3><i class="fas fa-book"></i> Related Publications</h3>
+                            <p>This project is closely related to publications on the impact of urban morphology on solar potential and energy consumption. Please see the <a href="../publications.html">Publications</a> page for more information.</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Ehsan Rostami. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- The Modal -->
+    <div id="fullscreen-modal" class="modal">
+        <span class="close-button" onclick="closeFullscreen()">×</span>
+        <img class="modal-content" id="fullscreen-image">
+    </div>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        function openFullscreen(img) {
+            const modal = document.getElementById('fullscreen-modal');
+            const modalImg = document.getElementById('fullscreen-image');
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        }
+
+        function closeFullscreen() {
+            const modal = document.getElementById('fullscreen-modal');
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>

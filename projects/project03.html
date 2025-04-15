@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grasshopper Urban Toolkit - Ehsan Rostami</title>
+    <meta name="description" content="Project page detailing the development of a Grasshopper toolkit for urban morphology analysis.">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../projects-style.css">
+    <link rel="stylesheet" href="project01-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="container">
+            <h1>Ehsan Rostami</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../publications.html">Publications</a></li>
+                    <li><a href="../projects.html" class="active">Projects</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                    <li><a href="../certificates.html">Certificates</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Left sidebar - Profile section -->
+                <aside class="profile-sidebar">
+                    <div class="profile-image">
+                        <img src="../images/profile.jpg" alt="Ehsan Rostami, Architecture and Energy researcher">
+                    </div>
+                    <div class="profile-info">
+                        <h2>Ehsan Rostami</h2>
+                        <p class="subtitle">He/Him/His</p>
+                        <p class="subtitle">MSc in Architecture and Energy</p>
+                        <p class="subtitle">Prospective PhD Student 2026</p>
+                        <div class="contact-details">
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:ehsan.rostami@outlook.com">ehsan.rostami@outlook.com</a></p>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/ehsan-rostami-353387139" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.researchgate.net/profile/Ehsan_Rostami3" target="_blank"><i class="fab fa-researchgate"></i></a>
+                            <a href="https://orcid.org/0009-0009-4513-5260" target="_blank"><i class="fab fa-orcid"></i></a>
+                            <a href="https://scholar.google.com/citations?user=A6zpEdQAAAAJ&hl=en" target="_blank"><i class="fa-brands fa-google"></i></a>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Main content section -->
+                <div class="main-content">
+                    <section class="project-details">
+                        <h2>Urban Morphology Toolkit using Grasshopper</h2>
+                        <p class="project-intro">
+                            This project documents the development of a Grasshopper toolkit designed for the analysis of urban morphology parameters.
+                        </p>
+
+                        <div class="project-overview">
+                            <h3><i class="fas fa-info-circle"></i> Project Overview</h3>
+                            <p>Precise quantification of urban morphology is crucial for understanding microclimate behavior, but manual measurement can be time-consuming. These algorithms automate the process, extracting key parameters directly from 3D models for efficient and detailed analysis. </p>
+                            <div class="image-gallery">
+                                <img src="../images/projects/project03_1.jpg" alt="Grasshopper Toolkit Screenshot" onclick="openFullscreen(this)">
+                            </div>
+                        </div>
+
+                        <div class="methodology">
+                            <h3><i class="fas fa-tools"></i> Methodology</h3>
+                            <ul>
+                                <li><b>Parameter Identification:</b> Developing algorithms to extract information on Floor Area, Height, Building Coverage Ratio (BCR), Floor Area Ratio (FAR) and building rotation of each building
+                                    </li>
+                                <li><b>GIS-Free Workflow:</b> Designed to function effectively without dependency on GIS data, these algorithms rely on architectural data.</li>
+                            </ul>
+                        </div>
+
+                        <div class="innovation">
+                            <h3><i class="fas fa-lightbulb"></i> Key Innovation</h3>
+                            <p>The primary innovation lies in the creation of automated tools that can rapidly extract key urban morphology parameters from 3D models. This enables researchers and designers to analyze urban environments quickly and quantitatively.</p>
+                        </div>
+
+                        <div class="results">
+                            <h3><i class="fas fa-chart-bar"></i> Key Findings</h3>
+                            <p>These algorithms have been successfully used to model the urban core of Ilam city and can help us to quantify impacts of different urban morphological parameters on urban climate, energy consumption, and access to light.</p>
+                        </div>
+
+                        <div class="publications">
+                            <h3><i class="fas fa-book"></i> Related Publications and Works</h3>
+                            <ul>
+                                <li>This project is directly related to publications on the impact of urban morphology on solar potential, energy consumption, and daylight autonomy. Please see the <a href="../publications.html">Publications</a> page for more information.</li>
+                                <li>Efforts are underway to package these algorithms into a user-friendly Grasshopper plugin for wider dissemination and application.</li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ehsan Rostami. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- The Modal -->
+    <div id="fullscreen-modal" class="modal">
+        <span class="close-button" onclick="closeFullscreen()">&times;</span>
+        <img class="modal-content" id="fullscreen-image">
+    </div>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        function openFullscreen(img) {
+            const modal = document.getElementById('fullscreen-modal');
+            const modalImg = document.getElementById('fullscreen-image');
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        }
+
+        function closeFullscreen() {
+            const modal = document.getElementById('fullscreen-modal');
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>

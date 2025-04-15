@@ -844,3 +844,98 @@ nav ul li a {
         text-align: center;
     }
 }
+/* Make accordion headings look clickable */
+.cv-block h3.accordion-toggle {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+  }
+  
+  .cv-block h3.accordion-toggle:hover {
+    color: #2c3e50;
+  }
+  
+  /* Style for the accordion content */
+  .cv-block h3.accordion-toggle {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+    text-align: left; /* Ensure heading text stays left-aligned */
+  }
+  
+  .cv-block h3.accordion-toggle i.fas {
+    margin-right: 10px; /* Keep space between icon and text */
+    text-align: left;
+  }
+  
+  .cv-block h3.accordion-toggle:hover {
+    color: #2c3e50;
+  }
+  
+/* Make accordion headings look clickable */
+.cv-block h3.accordion-toggle {
+  cursor: pointer;
+  padding: 10px 0;
+  transition: all 0.3s ease;
+  text-align: left;
+  width: 100%;
+  position: relative;
+  padding-right: 30px; /* Space for the icon */
+}
+
+/* Position the original section icon */
+.cv-block h3 i.fas:first-child {
+  margin-right: 10px;
+}
+
+.cv-block h3.accordion-toggle:hover {
+  color: #2c3e50;
+}
+
+/* Position the toggle icon to the right */
+.accordion-icon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8em;
+}
+
+/* Style for the accordion content */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  width: 100%;
+}
+
+/* When the accordion is open */
+.accordion-content.open {
+  max-height: 2000px; /* Large enough to contain all content */
+  transition: max-height 0.6s ease;
+}
+
+/* Remove any potential flex or centering from parent container */
+.cv-block {
+  display: block;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 15px;
+  width: 100%;
+}
+
+/* Override any centering or flex that might be applied */
+.cv-item, .cv-item-header, .cv-institution, .publication-list,
+.accordion-content p, .accordion-content ul, .accordion-content li, 
+.accordion-content h4 {
+  display: block;
+  text-align: left;
+  margin-left: 0;
+  width: 100%;
+}

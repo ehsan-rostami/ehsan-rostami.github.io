@@ -1,0 +1,160 @@
+/* project01-style.css */
+
+.project-details {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.project-details h2 {
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #4b9cd3;
+}
+
+.project-intro {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 25px;
+    padding-left: 15px;
+    border-left: 3px solid #4b9cd3;
+}
+
+.project-overview h3, .methodology h3, .innovation h3, .results h3, .publications h3 {
+    color: #4b9cd3;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.project-overview p, .methodology ul, .innovation p, .results p, .publications p {
+    font-size: 1.05em;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.methodology ul {
+    list-style-type: disc;
+    padding-left: 30px;
+}
+
+.methodology li {
+    margin-bottom: 10px;
+}
+
+/* Image Gallery Styling */
+.image-gallery {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.image-gallery img {
+    width: 45%; /* Adjust as needed */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.publications a {
+    color: #4b9cd3;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.publications a:hover {
+    color: #3a7ca8;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .image-gallery {
+        flex-direction: column;
+    }
+
+    .image-gallery img {
+        width: 90%;
+        margin-bottom: 15px;
+    }
+}
+
+/* More vibrant callout for the "First attempt" note */
+.innovation p:nth-child(2){
+    font-style: italic;
+    color: #777;
+}
+
+/* Subtle animation for different sections appearing */
+.project-overview, .methodology, .innovation, .results {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards ease-out;
+}
+
+/* Stagger the animation for a smoother load-in effect */
+.project-overview { animation-delay: 0.1s; }
+.methodology { animation-delay: 0.3s; }
+.innovation { animation-delay: 0.5s; }
+.results { animation-delay: 0.7s; }
+
+/* Fullscreen Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Add Animation */
+.modal-content, .close-button {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}

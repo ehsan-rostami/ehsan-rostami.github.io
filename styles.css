@@ -615,6 +615,7 @@ nav ul li a {
     border-bottom: 1px solid #eee;
 }
 
+/* Certificate Filters (Tabs) */
 .certificate-filters {
     margin-bottom: 25px;
     display: flex;
@@ -631,29 +632,17 @@ nav ul li a {
     font-size: 0.9em;
     transition: all 0.3s ease;
     font-family: 'Montserrat', sans-serif;
+    color: #555;
 }
 
-.filter-btn:hover, .filter-btn.active {
+.filter-btn:hover,
+.filter-btn.active {
     background-color: #4b9cd3;
     color: white;
 }
 
-.certificate-category {
-    margin-bottom: 40px;
-}
-
-.certificate-category h3 {
-    color: #4b9cd3;
-    margin-bottom: 20px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #f0f0f0;
-    display: flex;
-    align-items: center;
-    font-size: 1.25em;
-}
-
-.certificate-category h3 i {
-    margin-right: 10px;
+.certificates-list {
+    /*  Added to contain the certificate items */
 }
 
 .certificate-item {
@@ -696,7 +685,17 @@ nav ul li a {
 
 .certificate-date {
     color: #666;
-    font-size: 0.9em;
+    font-size: 0.85em;
+    font-style: italic; /* Added emphasis to date */
+    /*  display: block; /*  Ensure date is on its own line */
+    /*  text-align: right; /*  Align the date to the right */
+     display: flex;  /* Use flexbox for alignment */
+    align-items: center; /* Vertically center the icon and text */
+    gap: 5px; /* Add some space between the icon and text */
+}
+
+.certificate-date i {
+    color: #888; /*  Lighter color for the calendar icon */
 }
 
 .certificate-issuer {
@@ -790,21 +789,22 @@ nav ul li a {
     .certificate-header {
         flex-direction: column;
     }
-    
+
     .certificate-date {
         margin-top: 5px;
     }
-    
+
     .certificate-title {
         margin-bottom: 10px;
     }
-    
+
     .certificate-links {
         flex-direction: column;
         gap: 10px;
     }
-    
-    .certificate-link, .description-toggle {
+
+    .certificate-link,
+    .description-toggle {
         width: 100%;
         justify-content: center;
     }

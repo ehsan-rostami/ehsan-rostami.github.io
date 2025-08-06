@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPW Insights: Advanced Weather Data Visualization - Ehsan Rostami</title>
+    <meta name="description" content="Project page detailing the EPW Insights web application for visualizing and analyzing EnergyPlus Weather data.">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../projects-style.css">
+    <link rel="stylesheet" href="project01-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .project-details > div {
+            margin-bottom: 35px;
+        }
+        .project-details > div:last-of-type {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="container">
+            <h1>Ehsan Rostami</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../publications.html">Publications</a></li>
+                    <li><a href="../projects.html" class="active">Projects</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                    <li><a href="../certificates.html">Certificates</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="content-wrapper">
+                <aside class="profile-sidebar">
+                    <div class="profile-image">
+                        <img src="../images/profile.jpg" alt="Ehsan Rostami, Architecture and Energy researcher">
+                    </div>
+                    <div class="profile-info">
+                        <h2>Ehsan Rostami</h2>
+                        <p class="subtitle">He/Him/His</p>
+                        <p class="subtitle">MSc in Architecture and Energy</p>
+                        <p class="subtitle">Prospective PhD Student</p>
+                        <div class="contact-details">
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:ehsan.rostami@outlook.com">ehsan.rostami@outlook.com</a></p>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/ehsan-rostami" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/ehsan-rostami-353387139" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.researchgate.net/profile/Ehsan_Rostami3" target="_blank" aria-label="ResearchGate Profile"><i class="fab fa-researchgate"></i></a>
+                            <a href="https://orcid.org/0009-0009-4513-5260" target="_blank" aria-label="ORCID Profile"><i class="fab fa-orcid"></i></a>
+                            <a href="https://scholar.google.com/citations?hl=en&user=CjZaeFwAAAAJ" target="_blank" aria-label="Google Scholar Profile"><i class="fa-brands fa-google"></i></a>
+                        </div>
+                    </div>
+                </aside>
+
+                <div class="main-content">
+                    <section class="project-details">
+                        <h2>EPW Insights: Advanced Weather Data Visualization</h2>
+                        <p class="project-intro">
+                            EPW Insights is a comprehensive web-based tool designed for visualizing and analyzing EnergyPlus Weather (EPW) data. It provides interactive charts and tables to explore various climate parameters, offering researchers and practitioners a powerful platform for understanding weather patterns and their implications for building performance and urban design.
+                        </p>
+
+                        <div class="project-overview">
+                            <h3><i class="fas fa-info-circle"></i> Project Overview</h3>
+                            <p>The application addresses the need for accessible, interactive visualization of weather data crucial for sustainable building design and urban planning. EPW Insights transforms complex meteorological data into intuitive visual representations, enabling better decision-making in climate-responsive design.</p>
+                            <div class="image-gallery">
+                                <img src="../images/projects/project04_1.jpg" alt="Climate Comparison" onclick="openFullscreen(this)">
+                                <img src="../images/projects/project04_2.jpg" alt="Psychrometric Chart" onclick="openFullscreen(this)">
+                            </div>
+                        </div>
+
+                        <div class="methodology">
+                            <h3><i class="fas fa-tools"></i> Key Features</h3>
+                            <ul>
+                                <li><b>Comprehensive Visualizations:</b> Annual heatmaps, monthly distributions, hourly averages, and interactive charts for temperature, humidity, solar radiation, and wind patterns.</li>
+                                <li><b>Advanced Analysis Tools:</b> Psychrometric charts with comfort zone overlays (ASHRAE 55 and ISO 7730 PMV), interactive sun path diagrams, and wind rose visualizations.</li>
+                                <li><b>Comparison Functionality:</b> Side-by-side analysis of multiple EPW files enabling comparative climate studies across different locations or time periods.</li>
+                                <li><b>Interactive Mapping:</b> Location visualization with geographic context using Leaflet.js integration.</li>
+                                <li><b>Export Capabilities:</b> High-quality PNG export functionality for charts and CSV export for data tables.</li>
+                                <li><b>Responsive Design:</b> Optimized for various screen sizes ensuring accessibility across devices.</li>
+                            </ul>
+                        </div>
+
+                        <div class="innovation">
+                            <h3><i class="fas fa-lightbulb"></i> Key Innovation</h3>
+                            <p>EPW Insights represents a significant advancement in weather data accessibility for the building performance and urban design communities. Unlike traditional desktop applications, this web-based tool requires no installation and provides instant access to sophisticated analysis capabilities.</p>
+                            <p>The application leverages modern web technologies including D3.js for data visualization, delivering professional-grade charts and analysis tools directly in the browser. The comparison feature enables researchers to conduct multi-location climate studies with unprecedented ease.</p>
+                            <div class="image-gallery">
+                                <img src="../images/projects/project04_3.jpg" alt="Cloud Cover Analysis" onclick="openFullscreen(this)">
+                                <img src="../images/projects/project04_4.jpg" alt="Sun Path Analysis" onclick="openFullscreen(this)">
+                            </div>
+                        </div>
+
+                        <div class="results">
+                            <h3><i class="fas fa-chart-bar"></i> Technical Implementation</h3>
+                            <ul>
+                                <li><b>Frontend Technologies:</b> HTML5, CSS3 (Bootstrap 5), JavaScript (ES6+)</li>
+                                <li><b>Visualization Library:</b> D3.js (v7) for advanced data-driven document manipulation</li>
+                                <li><b>Mapping:</b> Leaflet.js for interactive location display</li>
+                                <li><b>Solar Calculations:</b> SunCalc.js for accurate sun path analysis</li>
+                                <li><b>Data Processing:</b> Custom EPW parser handling standard EnergyPlus weather file formats</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="publications">
+                            <h3><i class="fas fa-external-link-alt"></i> Access & Resources</h3>
+                            <ul>
+                                <li><b>Live Application:</b> <a href="https://ehsan-rostami.github.io/epw-insights/" target="_blank">https://ehsan-rostami.github.io/epw-insights/</a></li>
+                                <li><b>Source Code:</b> <a href="https://github.com/ehsan-rostami/epw-insights" target="_blank">Available on GitHub</a> under MIT License</li>
+                                <li>The tool supports standard EPW files and includes example datasets (Tehran vs. London) for demonstration</li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Ehsan Rostami. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="fullscreen-modal" class="modal">
+        <span class="close-button" onclick="closeFullscreen()">×</span>
+        <img class="modal-content" id="fullscreen-image" alt="Fullscreen project image">
+    </div>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        function openFullscreen(img) {
+            const modal = document.getElementById('fullscreen-modal');
+            const modalImg = document.getElementById('fullscreen-image');
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        }
+
+        function closeFullscreen() {
+            const modal = document.getElementById('fullscreen-modal');
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>

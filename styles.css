@@ -1,4 +1,3 @@
-/* Base styles */
 * {
     margin: 0;
     padding: 0;
@@ -26,10 +25,9 @@ h1, h2, h3 {
     padding: 0 20px;
 }
 
-/* Header styles */
 header {
     background-color: #fff;
-    border-top: 4px solid #4b9cd3; /* Your existing accent color */
+    border-top: 4px solid #4b9cd3;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     padding: 20px 0;
     margin-bottom: 30px;
@@ -43,7 +41,7 @@ header .container {
 
 header h1 {
     color: #333;
-    margin-bottom: 0; /* Adjust this if using flex layout */
+    margin-bottom: 0;
     font-size: 1.8rem;
     font-weight: 600;
 }
@@ -107,13 +105,11 @@ nav ul li a:hover::after, nav ul li a.active::after {
     width: 100%;
 }
 
-/* Content wrapper - Two column layout */
 .content-wrapper {
     display: flex;
     gap: 30px;
 }
 
-/* Profile sidebar */
 .profile-sidebar {
     flex: 0 0 280px;
     background-color: #fff;
@@ -167,6 +163,15 @@ nav ul li a:hover::after, nav ul li a.active::after {
     margin-right: 10px;
 }
 
+.contact-details a {
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+    color: #4b9cd3;
+}
+
 .social-links {
     display: flex;
     justify-content: center;
@@ -193,12 +198,10 @@ nav ul li a:hover::after, nav ul li a.active::after {
     transform: translateY(-3px);
 }
 
-/* Main content area */
 .main-content {
     flex: 1;
 }
 
-/* Home content */
 .home-content {
     background-color: #fff;
     border-radius: 8px;
@@ -256,7 +259,6 @@ nav ul li a:hover::after, nav ul li a.active::after {
     animation: fadeIn 0.8s ease-in-out;
 }
 
-/* Footer */
 footer {
     background-color: #333;
     color: #fff;
@@ -265,7 +267,6 @@ footer {
     margin-top: 40px;
 }
 
-/* Responsive styles */
 @media (max-width: 900px) {
     .content-wrapper {
         flex-direction: column;
@@ -292,7 +293,7 @@ footer {
         margin-bottom: 10px;
     }
 }
-/* CV page specific styles */
+
 .cv-section {
     background-color: #fff;
     border-radius: 8px;
@@ -366,7 +367,7 @@ footer {
 .publication-list a:hover {
     text-decoration: underline;
 }
-/* Publications page specific styles */
+
 .publications-section {
     background-color: #fff;
     border-radius: 8px;
@@ -497,7 +498,7 @@ footer {
         margin-bottom: 10px;
     }
 }
-/* Mobile navigation styles */
+
 .menu-toggle {
     display: none;
     cursor: pointer;
@@ -532,7 +533,7 @@ footer {
     }
 }
 
-/* Improve reading */
+
 p {
     line-height: 1.8;
 }
@@ -548,7 +549,7 @@ h1, h2, h3 {
 nav ul li a {
     letter-spacing: 0.01em;
 }
-/* Improve publication */
+
 .publication-item {
     display: flex;
     margin-bottom: 2.5rem;
@@ -599,7 +600,7 @@ nav ul li a {
         margin-bottom: 0.5rem;
     }
 }
-/* Certificate page specific styles */
+
 .certificates-section {
     background-color: #fff;
     border-radius: 8px;
@@ -615,7 +616,7 @@ nav ul li a {
     border-bottom: 1px solid #eee;
 }
 
-/* Certificate Filters (Tabs) */
+
 .certificate-filters {
     margin-bottom: 25px;
     display: flex;
@@ -639,10 +640,6 @@ nav ul li a {
 .filter-btn.active {
     background-color: #4b9cd3;
     color: white;
-}
-
-.certificates-list {
-    /*  Added to contain the certificate items */
 }
 
 .certificate-item {
@@ -686,16 +683,14 @@ nav ul li a {
 .certificate-date {
     color: #666;
     font-size: 0.85em;
-    font-style: italic; /* Added emphasis to date */
-    /*  display: block; /*  Ensure date is on its own line */
-    /*  text-align: right; /*  Align the date to the right */
-     display: flex;  /* Use flexbox for alignment */
-    align-items: center; /* Vertically center the icon and text */
-    gap: 5px; /* Add some space between the icon and text */
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .certificate-date i {
-    color: #888; /*  Lighter color for the calendar icon */
+    color: #888;
 }
 
 .certificate-issuer {
@@ -809,7 +804,7 @@ nav ul li a {
         justify-content: center;
     }
 }
-/* CV download button styles */
+
 .cv-download {
     margin-bottom: 25px;
     text-align: center;
@@ -844,7 +839,7 @@ nav ul li a {
         text-align: center;
     }
 }
-/* Make accordion headings look clickable */
+
 .cv-block h3.accordion-toggle {
     cursor: pointer;
     display: flex;
@@ -854,31 +849,29 @@ nav ul li a {
     transition: all 0.3s ease;
   }
   
-  .cv-block h3.accordion-toggle:hover {
+.cv-block h3.accordion-toggle:hover {
     color: #2c3e50;
   }
   
-  /* Style for the accordion content */
-  .cv-block h3.accordion-toggle {
+.cv-block h3.accordion-toggle {
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
     transition: all 0.3s ease;
-    text-align: left; /* Ensure heading text stays left-aligned */
-  }
-  
-  .cv-block h3.accordion-toggle i.fas {
-    margin-right: 10px; /* Keep space between icon and text */
     text-align: left;
-  }
+}
   
-  .cv-block h3.accordion-toggle:hover {
+.cv-block h3.accordion-toggle i.fas {
+    margin-right: 10px;
+    text-align: left;
+}
+  
+.cv-block h3.accordion-toggle:hover {
     color: #2c3e50;
-  }
+}
   
-/* Make accordion headings look clickable */
 .cv-block h3.accordion-toggle {
   cursor: pointer;
   padding: 10px 0;
@@ -886,10 +879,9 @@ nav ul li a {
   text-align: left;
   width: 100%;
   position: relative;
-  padding-right: 30px; /* Space for the icon */
+  padding-right: 30px;
 }
 
-/* Position the original section icon */
 .cv-block h3 i.fas:first-child {
   margin-right: 10px;
 }
@@ -898,7 +890,6 @@ nav ul li a {
   color: #2c3e50;
 }
 
-/* Position the toggle icon to the right */
 .accordion-icon {
   position: absolute;
   right: 0;
@@ -907,7 +898,6 @@ nav ul li a {
   font-size: 0.8em;
 }
 
-/* Style for the accordion content */
 .accordion-content {
   max-height: 0;
   overflow: hidden;
@@ -915,13 +905,11 @@ nav ul li a {
   width: 100%;
 }
 
-/* When the accordion is open */
 .accordion-content.open {
-  max-height: 2000px; /* Large enough to contain all content */
+  max-height: 2000px;
   transition: max-height 0.6s ease;
 }
 
-/* Remove any potential flex or centering from parent container */
 .cv-block {
   display: block;
   margin-bottom: 15px;
@@ -930,7 +918,6 @@ nav ul li a {
   width: 100%;
 }
 
-/* Override any centering or flex that might be applied */
 .cv-item, .cv-item-header, .cv-institution, .publication-list,
 .accordion-content p, .accordion-content ul, .accordion-content li, 
 .accordion-content h4 {

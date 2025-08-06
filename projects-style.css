@@ -1,4 +1,3 @@
-/* Projects page specific styles */
 .projects-section {
     background-color: #fff;
     border-radius: 8px;
@@ -14,7 +13,6 @@
     border-bottom: 2px solid #4b9cd3;
 }
 
-/* Projects grid layout */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -22,7 +20,6 @@
     margin-top: 30px;
 }
 
-/* Project card styles */
 .project-card {
     position: relative;
     border-radius: 8px;
@@ -37,7 +34,6 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Project image container */
 .project-image {
     width: 100%;
     height: 100%;
@@ -55,7 +51,6 @@
     transform: scale(1.05);
 }
 
-/* Project info (title and date) */
 .project-info {
     position: absolute;
     bottom: 0;
@@ -92,7 +87,6 @@
     margin: 0;
 }
 
-/* Overlay with description (shown on hover) */
 .project-overlay {
     position: absolute;
     top: 0;
@@ -126,7 +120,6 @@
     transform: translateY(0);
 }
 
-/* Responsive adjustments */
 @media (max-width: 900px) {
     .projects-grid {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -145,7 +138,6 @@
     }
 }
 
-/* Animation for project cards */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -162,7 +154,6 @@
     opacity: 0;
 }
 
-/* Staggered animation delay */
 .project-card:nth-child(1) { animation-delay: 0.1s; }
 .project-card:nth-child(2) { animation-delay: 0.2s; }
 .project-card:nth-child(3) { animation-delay: 0.3s; }

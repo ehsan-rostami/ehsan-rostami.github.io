@@ -34,7 +34,6 @@
     <main>
         <div class="container">
             <div class="content-wrapper">
-                <!-- Left sidebar - Profile section -->
                 <aside class="profile-sidebar">
                     <div class="profile-image">
                         <img src="images/profile.jpg" alt="Ehsan Rostami, Architecture and Energy researcher">
@@ -43,16 +42,17 @@
                         <h2>Ehsan Rostami</h2>
                         <p class="subtitle">He/Him/His</p>
                         <p class="subtitle">MSc in Architecture and Energy</p>
-                        <p class="subtitle">Prospective PhD Student 2026</p>
+                        <p class="subtitle">Prospective PhD Student</p>
                         <div class="contact-details">
                             <p><i class="fas fa-envelope"></i> <a href="mailto:ehsan.rostami@outlook.com">ehsan.rostami@outlook.com</a></p>
+                         
                         </div>
                         <div class="social-links">
                             <a href="https://github.com/ehsan-rostami" target="_blank"><i class="fab fa-github"></i></a>
                             <a href="https://www.linkedin.com/in/ehsan-rostami-353387139" target="_blank"><i class="fab fa-linkedin"></i></a>
                             <a href="https://www.researchgate.net/profile/Ehsan_Rostami3" target="_blank"><i class="fab fa-researchgate"></i></a>
                             <a href="https://orcid.org/0009-0009-4513-5260" target="_blank"><i class="fab fa-orcid"></i></a>
-                            <a href="https://scholar.google.com/citations?user=A6zpEdQAAAAJ&hl=en" target="_blank"><i class="fa-brands fa-google"></i></a>
+                            <a href="https://scholar.google.com/citations?hl=en&user=CjZaeFwAAAAJ" target="_blank"><i class="fa-brands fa-google"></i></a>
                         </div>
                     </div>
                 </aside>
@@ -149,7 +149,6 @@
             document.querySelector('.menu-toggle').addEventListener('click', function() {
         document.querySelector('nav ul').classList.toggle('show');
     });
-        // JavaScript for abstract toggle functionality
         document.addEventListener('DOMContentLoaded', function() {
             const abstractToggles = document.querySelectorAll('.abstract-toggle');
             
@@ -163,7 +162,6 @@
                 });
             });
             
-            // Filter functionality
             const filterButtons = document.querySelectorAll('.filter-btn');
             const publicationItems = document.querySelectorAll('.publication-item');
             
@@ -171,11 +169,9 @@
                 button.addEventListener('click', function() {
                     const filter = this.getAttribute('data-filter');
                     
-                    // Update active button
                     filterButtons.forEach(btn => btn.classList.remove('active'));
                     this.classList.add('active');
                     
-                    // Filter publications
                     publicationItems.forEach(item => {
                         if (filter === 'all' || item.classList.contains(filter)) {
                             item.style.display = 'flex';

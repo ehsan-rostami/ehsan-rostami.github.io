@@ -148,13 +148,15 @@ nav ul li a:hover::after, nav ul li a.active::after {
 }
 
 .contact-details {
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 .contact-details p {
     margin-bottom: 10px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    
 }
 
 .contact-details i {

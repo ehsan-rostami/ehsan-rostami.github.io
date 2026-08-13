@@ -1,0 +1,22 @@
+<header>
+    <div class="menu-toggle" aria-label="Toggle navigation menu" role="button" tabindex="0">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="container">
+        <div class="site-brand">
+            <h1><a href="{{ '/' | relative_url }}">{{ site.hero_tagline }}</a></h1>
+            <p class="site-subtitle">{{ site.author.name }} - Architect and Urban Sustainability Researcher</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ '/' | relative_url }}" {% if page.nav == 'home' %}class="active"{% endif %}>Home</a></li>
+                <li><a href="{{ '/cv' | relative_url }}" {% if page.nav == 'cv' %}class="active"{% endif %}>CV</a></li>
+                <li><a href="{{ '/publications' | relative_url }}" {% if page.nav == 'publications' %}class="active"{% endif %}>Publications</a></li>
+                <li><a href="{{ '/projects' | relative_url }}" {% if page.nav == 'projects' %}class="active"{% endif %}>Research Projects</a></li>
+                <li><a href="{{ '/portfolio' | relative_url }}" {% if page.nav == 'portfolio' %}class="active"{% endif %}>Portfolio</a></li>
+                <li><a href="{{ '/blog' | relative_url }}" {% if page.nav == 'blog' %}class="active"{% endif %}>Notes</a></li>
+                <li><a href="{{ '/certificates' | relative_url }}" {% if page.nav == 'certificates' %}class="active"{% endif %}>Certificates</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>

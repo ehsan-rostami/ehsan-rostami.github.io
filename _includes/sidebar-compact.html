@@ -1,0 +1,28 @@
+<aside class="profile-sidebar profile-sidebar--compact">
+    <div class="profile-image-compact">
+        <img src="{{ 'assets/images/profile.jpg' | relative_url }}" alt="{{ site.author.name }}, Architecture and Energy researcher" loading="lazy">
+    </div>
+    <h2 class="profile-name-compact">{{ site.author.name }}</h2>
+    <div class="social-links">
+        <a href="mailto:{{ site.author.email }}" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.researchgate.net/profile/{{ site.author.researchgate }}" target="_blank" rel="noopener" aria-label="ResearchGate Profile"><i class="fab fa-researchgate"></i></a>
+        <a href="https://orcid.org/{{ site.author.orcid }}" target="_blank" rel="noopener" aria-label="ORCID Profile"><i class="fab fa-orcid"></i></a>
+        <a href="https://scholar.google.com/citations?hl=en&user={{ site.author.scholar }}" target="_blank" rel="noopener" aria-label="Google Scholar Profile"><i class="fa-brands fa-google"></i></a>
+    </div>
+    {% assign recent_posts = site.posts | where_exp: "post", "post.url != page.url" | slice: 0, 3 %}
+    {% if recent_posts.size > 0 %}
+    <div class="sidebar-widget">
+        <h3 class="sidebar-widget-title">Latest Notes</h3>
+        <ul class="sidebar-widget-list">
+            {% for post in recent_posts %}
+            <li>
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                <span class="sidebar-widget-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+</aside>

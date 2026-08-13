@@ -1,0 +1,16 @@
+- slug: project04
+  title: "EPW Insights: Advanced Weather Data Visualization"
+  image: projects/project04.jpg
+  description: "Advanced weather data visualization and analysis tool for EnergyPlus Weather (EPW) files with interactive charts and comparison features"
+- slug: project01
+  title: "Mobile Measurement: Beyond Static Data"
+  image: projects/project01.jpg
+  description: "Advancing urban microclimate research through efficient mobile data collection methods"
+- slug: project02
+  title: "3D Urban Modeling without GIS"
+  image: projects/project02.jpg
+  description: "Overcoming data gaps: a large-scale 3D urban model created using resourceful methods where GIS data is limited, enabling robust solar potential & energy consumption simulations."
+- slug: project03
+  title: "Urban Morphology Toolkit"
+  image: projects/project03.jpg
+  description: "Automated parameter extraction for urban analysis"

@@ -1,0 +1,21 @@
+<aside class="profile-sidebar">
+    <div class="profile-image">
+        <img src="{{ 'assets/images/profile.jpg' | relative_url }}" alt="{{ site.author.name }}, Architecture and Energy researcher" loading="lazy">
+    </div>
+    <div class="profile-info">
+        <h2>{{ site.author.name }}</h2>
+        <p class="subtitle">He/Him/His</p>
+        <p class="subtitle">MSc in Architecture and Energy</p>
+        <p class="subtitle">Prospective PhD Student</p>
+        <div class="contact-details">
+            <p><i class="fas fa-envelope"></i> <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
+        </div>
+        <div class="social-links">
+            <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.researchgate.net/profile/{{ site.author.researchgate }}" target="_blank" rel="noopener" aria-label="ResearchGate Profile"><i class="fab fa-researchgate"></i></a>
+            <a href="https://orcid.org/{{ site.author.orcid }}" target="_blank" rel="noopener" aria-label="ORCID Profile"><i class="fab fa-orcid"></i></a>
+            <a href="https://scholar.google.com/citations?hl=en&user={{ site.author.scholar }}" target="_blank" rel="noopener" aria-label="Google Scholar Profile"><i class="fa-brands fa-google"></i></a>
+        </div>
+    </div>
+</aside>

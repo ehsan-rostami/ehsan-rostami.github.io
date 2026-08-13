@@ -1,86 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal website of Ehsan Rostami, researcher in Architecture and Energy focusing on sustainable urban design and energy efficiency.">
-    <title>CV - Ehsan Rostami</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <div class="menu-toggle">
-            <i class="fas fa-bars"></i>
-        </div>
-        <div class="container">
-            <h1>Ehsan Rostami</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="publications.html">Publications</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="cv.html" class="active">CV</a></li>
-                    <li><a href="certificates.html">Certificates</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+---
+layout: default
+nav: cv
+title: "CV - Ehsan Rostami"
+description: "Curriculum vitae of Ehsan Rostami, researcher in Architecture and Energy."
+extra_css:
+  - /assets/css/cv.css
+  - /assets/css/project-detail.css
+extra_js:
+  - /assets/js/lightbox.js
+---
+<section class="cv-section">
+    <h2>Curriculum Vitae</h2>
+    <p class="cv-intro">
+        A summary of my academic background, publications, and research experience in architecture and building energy performance. Download a copy below, or click a page to view it full-screen.
+    </p>
 
-    <main>
-        <div class="container">
-            <div class="content-wrapper">
-                <aside class="profile-sidebar">
-                    <div class="profile-image">
-                        <img src="images/profile.jpg" alt="Ehsan Rostami, Architecture and Energy researcher">
-                    </div>
-                    <div class="profile-info">
-                        <h2>Ehsan Rostami</h2>
-                        <p class="subtitle">He/Him/His</p>
-                        <p class="subtitle">MSc in Architecture and Energy</p>
-                        <p class="subtitle">Prospective PhD Student</p>
-                        <div class="contact-details">
-                            <p><i class="fas fa-envelope"></i> <a href="mailto:ehsan.rostami@outlook.com">ehsan.rostami@outlook.com</a></p>
-                         
-                        </div>
-                        <div class="social-links">
-                            <a href="https://github.com/ehsan-rostami" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/ehsan-rostami-353387139" target="_blank"><i class="fab fa-linkedin"></i></a>
-                            <a href="https://www.researchgate.net/profile/Ehsan_Rostami3" target="_blank"><i class="fab fa-researchgate"></i></a>
-                            <a href="https://orcid.org/0009-0009-4513-5260" target="_blank"><i class="fab fa-orcid"></i></a>
-                            <a href="https://scholar.google.com/citations?hl=en&user=CjZaeFwAAAAJ" target="_blank"><i class="fa-brands fa-google"></i></a>
-                        </div>
-                    </div>
-                </aside>
-    
-                <div class="main-content">        
-            <section class="cv-section">
-                <h2>Curriculum Vitae</h2>
-                
-                <div class="cv-download">
-                    <a href="images/Ehsan_Rostami_CV.pdf" download class="cv-download-btn">
-                        <i class="fas fa-file-download"></i>
-                        <span>Download CV</span>
-                    </a>
-                </div>                
-                </div>
-            </section>
-        </div>
-    </main>
+    <div class="cv-download">
+        <a href="{{ '/assets/images/Ehsan_Rostami_CV.pdf' | relative_url }}" download class="cv-download-btn">
+            <i class="fas fa-file-download"></i>
+            <span>Download CV (PDF)</span>
+        </a>
+    </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Ehsan Rostami. All rights reserved.</p>
-        </div>
-    </footer>
-    <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('nav ul').classList.toggle('show');
-        });
-    </script>
-</body>
-</html>
+    <div class="image-gallery">
+        <img src="{{ '/assets/images/cv/page-01.jpg' | relative_url }}" alt="CV page 1" loading="lazy">
+        <img src="{{ '/assets/images/cv/page-02.jpg' | relative_url }}" alt="CV page 2" loading="lazy">
+    </div>
+</section>
+
+{% include lightbox-modal.html %}

@@ -1,0 +1,43 @@
+---
+layout: default
+nav: portfolio
+title: "Portfolio - Ehsan Rostami"
+description: "Portfolio of architectural drawings, plans and design work by Ehsan Rostami, presented as a gallery."
+extra_css:
+  - /assets/css/gallery.css
+extra_js:
+  - /assets/js/gallery.js
+---
+<section class="portfolio-section">
+    <h2>Portfolio</h2>
+    <p class="gallery-intro">
+        A visual record of architectural drawings, urban studies, and design work produced over the years. Browse with the arrows or the thumbnails below, or click the image to view it full-screen.
+    </p>
+
+    <div class="gallery"
+         data-gallery
+         data-count="47"
+         data-image-prefix="{{ '/assets/images/portfolio/page-' | relative_url }}"
+         data-image-ext=".jpg"
+         data-image-pad="2">
+        <div class="gallery-stage">
+            <button class="gallery-nav gallery-prev" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button>
+            <div class="gallery-main">
+                <img class="gallery-main-image" src="" alt="">
+            </div>
+            <button class="gallery-nav gallery-next" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
+            <button class="gallery-expand" aria-label="View full screen"><i class="fas fa-expand"></i></button>
+        </div>
+        <div class="gallery-meta">
+            <span class="gallery-indicator">1 / 47</span>
+        </div>
+        <div class="gallery-thumbs"></div>
+    </div>
+</section>
+
+<div class="gallery-lightbox" id="gallery-lightbox">
+    <button class="gallery-lightbox-close" aria-label="Close full screen"><i class="fas fa-times"></i></button>
+    <button class="gallery-nav gallery-prev" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button>
+    <img class="gallery-lightbox-image" src="" alt="">
+    <button class="gallery-nav gallery-next" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
+</div>

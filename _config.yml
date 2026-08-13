@@ -1,0 +1,63 @@
+title: "Ehsan Rostami"
+tagline: "Personal Website"
+hero_tagline: "Architecture for a Changing Climate"
+description: >-
+  Personal website of Ehsan Rostami, researcher in Architecture and Energy
+  focusing on sustainable urban design, building performance, and energy
+  efficiency.
+url: "https://ehsan-rostami.github.io"
+baseurl: ""
+
+author:
+  name: "Ehsan Rostami"
+  email: ehsan.rostami@outlook.com
+  github: ehsan-rostami
+  linkedin: ehsan-rostami-353387139
+  researchgate: Ehsan_Rostami3
+  orcid: "0009-0009-4513-5260"
+  scholar: CjZaeFwAAAAJ
+
+cloudflare_analytics_token: "cdbb57f900004a72a5a5acb15b4a9033"
+
+markdown: kramdown
+permalink: /blog/:slug/
+
+collections:
+  posts:
+    output: true
+    permalink: /blog/:slug/
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate-v2
+
+pagination:
+  enabled: true
+  per_page: 10
+  permalink: '/:num/'
+  title: ':title - page :num'
+  sort_reverse: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      nav: blog
+      extra_css:
+        - /assets/css/blog.css
+      extra_js:
+        - /assets/js/notes.js
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

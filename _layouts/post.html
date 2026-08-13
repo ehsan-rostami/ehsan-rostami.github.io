@@ -1,0 +1,59 @@
+---
+layout: default
+---
+<div class="reading-progress" id="reading-progress"></div>
+
+<article class="post-detail">
+    <a href="{{ '/blog' | relative_url }}" class="back-link"><i class="fas fa-arrow-left"></i> All notes</a>
+
+    <header class="post-detail-header">
+        <h1>{{ page.title }}</h1>
+
+        {% if page.tags.size > 0 %}
+        <div class="post-tags-row">
+            {% for tag in page.tags %}<span class="post-tag">{{ tag }}</span>{% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="post-meta-row">
+            <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+            <div class="post-share">
+                <span class="post-share-label">Share</span>
+                <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url | url_encode }}&text={{ page.title | url_encode }}" target="_blank" rel="noopener" aria-label="Share on X"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | url_encode }}" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <button type="button" class="post-share-copy" data-url="{{ page.url | absolute_url }}" aria-label="Copy link"><i class="fas fa-link"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="post-body">
+        {{ content }}
+    </div>
+
+    {% assign all_posts = site.posts %}
+    {% assign current_index = -1 %}
+    {% for p in all_posts %}
+        {% if p.url == page.url %}
+            {% assign current_index = forloop.index0 %}
+        {% endif %}
+    {% endfor %}
+    {% if current_index > -1 %}
+        {% assign total = all_posts.size %}
+        {% assign newer_index = current_index | minus: 1 %}
+        {% assign older_index = current_index | plus: 1 %}
+        {% if newer_index >= 0 or older_index < total %}
+        <nav class="post-pager">
+            {% if newer_index >= 0 %}
+            <a href="{{ all_posts[newer_index].url | relative_url }}" class="post-pager-newer">
+                <i class="fas fa-arrow-left"></i> Newer
+            </a>
+            {% else %}<span></span>{% endif %}
+            {% if older_index < total %}
+            <a href="{{ all_posts[older_index].url | relative_url }}" class="post-pager-older">
+                Older <i class="fas fa-arrow-right"></i>
+            </a>
+            {% endif %}
+        </nav>
+        {% endif %}
+    {% endif %}
+</article>

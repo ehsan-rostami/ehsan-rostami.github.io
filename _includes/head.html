@@ -1,0 +1,52 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="KiQtemfQ9zucZgblw3IESSl-4bTe_P0Nr7YNuz1BSy4" />
+
+    {% comment %}
+      jekyll-seo-tag generates: <title>, meta description, canonical URL,
+      Open Graph tags, Twitter Card tags and basic JSON-LD.
+      Page-level overrides: set `title` and `description` in each page's
+      front matter.
+    {% endcomment %}
+    {% seo %}
+
+    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    {% if page.extra_css %}
+        {% for sheet in page.extra_css %}
+    <link rel="stylesheet" href="{{ sheet | relative_url }}">
+        {% endfor %}
+    {% endif %}
+
+    {% comment %} Person / researcher structured data for search engines {% endcomment %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "{{ site.author.name }}",
+      "url": "{{ site.url }}",
+      "email": "mailto:{{ site.author.email }}",
+      "jobTitle": "Researcher in Architecture and Energy",
+      "sameAs": [
+        "https://github.com/{{ site.author.github }}",
+        "https://www.linkedin.com/in/{{ site.author.linkedin }}",
+        "https://www.researchgate.net/profile/{{ site.author.researchgate }}",
+        "https://orcid.org/{{ site.author.orcid }}",
+        "https://scholar.google.com/citations?hl=en&user={{ site.author.scholar }}"
+      ]
+    }
+    </script>
+
+    {% if site.cloudflare_analytics_token %}
+    <!-- Cloudflare Web Analytics -->
+    <script defer type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ site.cloudflare_analytics_token }}"}'></script>
+    <!-- End Cloudflare Web Analytics -->
+    {% endif %}
+</head>

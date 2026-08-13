@@ -1,0 +1,7 @@
+.cv-intro {
+    max-width: 70ch;
+    margin: 0 auto 25px;
+    color: var(--color-ink-soft);
+    line-height: 1.7;
+    text-align: center;
+}

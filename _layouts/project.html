@@ -1,0 +1,47 @@
+---
+layout: default
+---
+<a href="{{ '/projects' | relative_url }}" class="back-link"><i class="fas fa-arrow-left"></i> All research projects</a>
+
+<section class="project-details">
+    <h2>{{ page.heading | default: page.title }}</h2>
+
+    {% if page.tools %}
+    <div class="project-tools">
+        {% for tool in page.tools %}
+        <span class="project-tool-tag"><i class="fas fa-cube"></i> {{ tool }}</span>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {{ content }}
+
+    {% assign all_projects = site.data.projects %}
+    {% assign current_index = -1 %}
+    {% for project in all_projects %}
+        {% if project.slug == page.slug %}
+            {% assign current_index = forloop.index0 %}
+        {% endif %}
+    {% endfor %}
+    {% if current_index > -1 %}
+        {% assign total = all_projects.size %}
+        {% assign prev_index = current_index | minus: 1 %}
+        {% if prev_index < 0 %}{% assign prev_index = total | minus: 1 %}{% endif %}
+        {% assign next_index = current_index | plus: 1 %}
+        {% if next_index >= total %}{% assign next_index = 0 %}{% endif %}
+        {% assign prev_project = all_projects[prev_index] %}
+        {% assign next_project = all_projects[next_index] %}
+        <nav class="project-pager">
+            <a href="{{ '/projects/' | append: prev_project.slug | append: '/' | relative_url }}" class="project-pager-prev">
+                <span class="project-pager-label"><i class="fas fa-arrow-left"></i> Previous</span>
+                {{ prev_project.title }}
+            </a>
+            <a href="{{ '/projects/' | append: next_project.slug | append: '/' | relative_url }}" class="project-pager-next">
+                <span class="project-pager-label">Next <i class="fas fa-arrow-right"></i></span>
+                {{ next_project.title }}
+            </a>
+        </nav>
+    {% endif %}
+</section>
+
+{% include lightbox-modal.html %}

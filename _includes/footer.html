@@ -1,0 +1,14 @@
+<footer>
+    <div class="container footer-content">
+        <nav class="footer-nav">
+            <a href="{{ '/' | relative_url }}">Home</a>
+            <a href="{{ '/cv' | relative_url }}">CV</a>
+            <a href="{{ '/publications' | relative_url }}">Publications</a>
+            <a href="{{ '/projects' | relative_url }}">Research Projects</a>
+            <a href="{{ '/portfolio' | relative_url }}">Portfolio</a>
+            <a href="{{ '/blog' | relative_url }}">Notes</a>
+            <a href="{{ '/certificates' | relative_url }}">Certificates</a>
+        </nav>
+        <p class="footer-copyright">&copy; {{ 'now' | date: "%Y" }} {{ site.author.name }}. All rights reserved.</p>
+    </div>
+</footer>

@@ -1,0 +1,325 @@
+.project-details h2 {
+    margin-bottom: 20px;
+}
+
+.project-intro {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--color-ink-soft);
+    margin-bottom: 25px;
+    padding-left: 15px;
+    border-left: 3px solid var(--color-accent);
+}
+
+.project-overview h3, .methodology h3, .innovation h3, .results h3, .publications h3 {
+    color: var(--color-primary);
+    margin-bottom: 15px;
+    font-size: 1.25em;
+}
+
+.project-overview p, .methodology ul, .innovation p, .results p, .publications p {
+    font-size: 1.02em;
+    line-height: 1.7;
+    color: var(--color-ink-soft);
+    margin-bottom: 20px;
+}
+
+.methodology ul:not(.feature-grid) {
+    list-style-type: disc;
+    padding-left: 30px;
+}
+
+.methodology li {
+    margin-bottom: 10px;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 25px;
+}
+
+.image-gallery img {
+    width: 320px;
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.03);
+}
+
+.publications a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.publications a:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .image-gallery img {
+        width: 100%;
+        max-width: 360px;
+    }
+}
+
+.innovation p:nth-child(2) {
+    font-style: italic;
+    color: var(--color-muted);
+}
+
+.project-overview, .methodology, .innovation, .results, .publications {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards ease-out;
+}
+
+.project-overview { animation-delay: 0.1s; }
+.methodology { animation-delay: 0.25s; }
+.innovation { animation-delay: 0.4s; }
+.results { animation-delay: 0.55s; }
+.publications { animation-delay: 0.7s; }
+
+/* Fullscreen lightbox modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.modal-content, .close-button {
+    animation-name: zoom;
+    animation-duration: 0.4s;
+}
+
+@keyframes zoom {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #bbb;
+}
+
+/* Tools tag row (badge style) */
+.project-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+.project-tool-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-nav);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: #fff;
+    background-color: var(--color-primary-dark);
+    padding: 4px 11px;
+    border-radius: 5px;
+}
+
+.project-tool-tag i {
+    font-size: 0.8em;
+    opacity: 0.85;
+}
+
+/* Previous / next project navigation */
+.project-pager {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 10px;
+    padding-top: 22px;
+    border-top: 1px solid var(--color-border);
+}
+
+.project-pager a {
+    display: flex;
+    flex-direction: column;
+    max-width: 46%;
+    text-decoration: none;
+    color: var(--color-ink);
+    font-weight: 500;
+    transition: color 0.25s ease;
+}
+
+.project-pager a:hover {
+    color: var(--color-primary);
+}
+
+.project-pager-label {
+    font-family: var(--font-nav);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--color-muted);
+    margin-bottom: 4px;
+}
+
+.project-pager-next {
+    text-align: right;
+    margin-left: auto;
+    align-items: flex-end;
+}
+
+@media (max-width: 600px) {
+    .project-pager {
+        flex-direction: column;
+    }
+    .project-pager a,
+    .project-pager-next {
+        max-width: 100%;
+        text-align: left;
+        align-items: flex-start;
+    }
+}
+
+/* Hero image at the top of a project page */
+.project-hero {
+    display: block;
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    margin-bottom: 24px;
+    cursor: zoom-in;
+}
+
+/* Methodology as numbered steps */
+.method-steps {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.method-steps li {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.method-step-number {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: #fff;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.method-step-body strong {
+    display: block;
+    color: var(--color-ink);
+    margin-bottom: 3px;
+    font-size: 1.02em;
+}
+
+.method-step-body p {
+    margin-bottom: 0;
+    color: var(--color-ink-soft);
+    font-size: 1em;
+}
+
+/* Pull-quote callout inside a project section */
+.project-callout {
+    margin: 4px 0 18px;
+    padding: 16px 22px;
+    background-color: var(--color-primary-tint);
+    border-left: 4px solid var(--color-primary);
+    border-radius: var(--radius-md);
+    font-size: 1.05rem;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--color-primary-dark);
+}
+
+/* Feature grid: for non-sequential lists (e.g. software features, tech stack) */
+.feature-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.feature-grid li {
+    background-color: var(--color-paper);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 14px 16px;
+    margin-bottom: 0;
+}
+
+.feature-grid strong {
+    display: block;
+    color: var(--color-primary-dark);
+    margin-bottom: 4px;
+    font-size: 0.98em;
+}
+
+.feature-grid span {
+    display: block;
+    color: var(--color-ink-soft);
+    font-size: 0.92em;
+    line-height: 1.55;
+}
+
+@media (max-width: 640px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
